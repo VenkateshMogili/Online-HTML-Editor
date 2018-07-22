@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Venkatesh++ HTML EDITOR</title>
+</head>
+<body onkeypress="runme()">
+	<center><h1>Welcome to Venkatesh++ HTML EDITOR</h1></title></center>
+<hr>
+
+<div class="main">
+<div class="tabs">
+	<button id="close" onclick="closewin()">X</button>
+</div>
+<div class="tab">
+<center><button id="material">Material</button></center>
+</div>
+<div class="tab">
+<center><button id="material" onclick="runme()">Run</button></center>
+</div>
+<div class="body">
+<div class="input">
+<textarea id="programme" rows="29" cols="80" name="programme writing" autofocus required>
+</textarea>
+</div>
+<div class="output">
+<div id="runoutput" class="bd">
+</div>
+</div>
+</div>
+<div class="footer">
+</div>
+</div>
+<div style="display:none;background-color:white;position:absolute;right:1%;top:20%;width:49%;height:455px;overflow:auto;" id="materialm">
+<h1>Material Menu</h1>
+<hr>
+<ol type="1">
+<li class="h1">Introduction</li>
+<div id="h1">
+	It is a language used for create a webpage and run in anyware with extension .html or .htm<br>
+	The basic abbreviation of html is HyperTextMarkupLanguage.<br>
+	It first developed by Berners Lee
+<br>
+<center><h3>Example</h3></center>
+<div id="example">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;h1&gt;My First Heading&lt;/h1&gt;
+
+ &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+<li class="h2">Editors</li>
+<div id="h2">
+	We are using notepad or geany or sublimetext editor etc., These are all the editors for our programme.
+</div>
+<li>Basic</li>
+<li>Elements</li>
+<li>Attributes</li>
+<li>Headings</li>
+<li>Paragraphs</li>
+<li>Styles</li>
+<li>Formatting</li>
+<li>Quotations</li>
+<li>Computercode</li>
+<li>Comments</li>
+<li>Html CSS</li>
+<li>Links</li>
+<li>Images</li>
+<li>Tables</li>
+<li>Lists</li>
+<li>Blocks</li>
+<li>Classes</li>
+<li>Layout</li>
+<li>Responsive</li>
+<li>Iframes</li>
+<li>Color Names</li>
+<li>Color Values</li>
+</ol>
+</div>
+</div>
+<center>
+<button id="hidee">Hide Material</button>
+<button id="showw">Show Material</button></center>
+<!--style-->
+<style>
+#example{color:black;background-color:white;border-left:2px solid black;border-radius:10px;}
+li{background-color:white;padding:5px;box-shadow:1px 1px 2px 2px blue;color:red;font-size:20px;font-family:lucida sans unicode;}
+#h1,#h2,#h3,#h4,#h5{display:none;border-left:2px solid black;background-color:white;border-top:2px solid black;color:green;font-family:arial;font-size:20px;}
+button#material{margin:3px;font-size:15px;font-family:arial;border:0px;border-radius:10px;}
+button#material:hover{transition:1s;color:brown;cursor:pointer;}
+.bd{height:90%;}
+div.input{width:50%;}
+div.output{width:50%;padding:5px;height:470px;overflow:auto;background-color:Dimgray;float:right;}
+textarea{background-color:Dimgray;float:left;height:467px;width:95%;}
+div.main{background-color:#303030;width:100%;height:505px;}
+div.tabs{background-color:orange;width:20%;height:25px;float:left;border-top-left-radius:100px;border-top-right-radius:100px;border:1px solid black;}
+div.tab{background-color:orange;width:10%;height:25px;float:left;border-top-left-radius:100px;border-top-right-radius:100px;border:1px solid black;}
+button#close{float:right;margin:6px;border:0px;border-radius:100px;}
+button{border:0px;box-shadow:1px 2px 3px lime;cursor:pointer;transition:0.6s;}
+button:hover{color:orange;background-color:black;transition:1s;}
+</style>
+<script>
+function runme(){
+	var x=document.getElementById("programme").value;
+	if (x[1]=="h")
+		document.getElementById("programme").style.color="aqua";
+		document.getElementById("runoutput").innerHTML="<html><body id='bd'>"+x+"</body></html>";
+}
+</script>
+<script src="vfont/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$("#hidee").click(function(){
+		$("#materialm").hide("fast");
+	});
+});
+$(document).ready(function(){
+	$("#showw").click(function(){
+		$("#materialm").show("fast");
+	});
+});
+$(document).ready(function(){
+	$(".h1").click(function(){
+		$("#h1").slideToggle("fast");
+		$("#h2,#h3,#h4,#h5,#h6").slideUp("fast");
+	});
+});
+$(document).ready(function(){
+	$(".h2").click(function(){
+		$("#h2").slideToggle("fast");
+		$("#h1,#h3,#h4,#h5,#h6").slideUp("fast");
+	});
+});
+$(document).ready(function(){
+	$("#material").click(function(){
+		$("#materialm").show("fast");
+	});
+});
+</script>
